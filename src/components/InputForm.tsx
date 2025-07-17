@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LivePreview from "./LivePreview";
 
 const InputForm = () => {
   const [name, setName] = useState('');
@@ -90,6 +91,15 @@ const InputForm = () => {
           Generate Preview
         </button>
       </form>
+
+      <LivePreview 
+        name={name}
+        role={role}
+        bio={bio}
+        github={github}
+        linkedin={linkedin}
+        skills={skills}
+      />
     </div>
   );
 };
